@@ -16,7 +16,6 @@ from decouple import config
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
@@ -24,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = config('DEBUG')
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -76,14 +75,14 @@ WSGI_APPLICATION = 'songapi.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE'        : 'django.db.backends.postgresql',
-        'DB_NAME'       : config('DB_NAME'),
-        'DB_USER'       : config('USER'),
-        'PASSWORD'      : config('PASSWORD'),
-        'HOST'          : config('HOST'),
-        'PORT'          : config('PORT'),
-    }
+	'default': {
+		'ENGINE'    : 'django.db.backends.mysql',
+		'NAME'      : config('DB_NAME'),
+		'USER'      : config('DB_USER'),
+		'PASSWORD'  : config('DB_PASSWORD'),
+		'HOST'      : config('DB_HOST'),
+		'PORT'      : config('DB_PORT'),
+	}
 }
 
 
