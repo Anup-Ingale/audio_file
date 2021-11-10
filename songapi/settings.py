@@ -77,12 +77,12 @@ WSGI_APPLICATION = 'songapi.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE'    : 'django.db.backends.postgresql',
-        'NAME'      : config('NAME'),
-        'USER'      : config('USER'),
-        'PASSWORD'  : config('PASSWORD'),
-        'HOST'      : config('HOST'),
-        'PORT'      : config('PORT'),
+        'ENGINE'        : 'django.db.backends.postgresql',
+        'DB_NAME'       : config('DB_NAME'),
+        'DB_USER'       : config('USER'),
+        'PASSWORD'      : config('DB_PASSWORD'),
+        'HOST'          : config('HOST'),
+        'PORT'          : config('PORT'),
     }
 }
 
