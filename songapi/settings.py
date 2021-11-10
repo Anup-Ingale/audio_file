@@ -75,10 +75,9 @@ WSGI_APPLICATION = 'songapi.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-
 DATABASES = {
     'default': {
-        'ENGINE'    : 'django.db.backends.postgresql',
+        'ENGINE'    : 'django.db.backends.mysql',
         'NAME'      : config('NAME'),
         'USER'      : config('USER'),
         'PASSWORD'  : config('PASSWORD'),
